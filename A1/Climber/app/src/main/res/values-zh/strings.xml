@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">攀岩应用</string>
+    <string name="score">成绩: </string>
+    <string name="climb">爬</string>
+    <string name="fall">落下</string>
+    <string name="reset">重启</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ứng Dụng Leo Núi</string>
+    <string name="score">Điểm Số: </string>
+    <string name="climb">Leo</string>
+    <string name="fall">Té</string>
+    <string name="reset">Làm Lại</string>
+</resources>

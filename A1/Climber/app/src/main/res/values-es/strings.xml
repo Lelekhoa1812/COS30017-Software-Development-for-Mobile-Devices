@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicación de Escalada</string>
+    <string name="score">Puntuación: </string>
+    <string name="climb">Escalar</string>
+    <string name="fall">Caer</string>
+    <string name="reset">Restablecer</string>
+</resources>
