@@ -1,0 +1,83 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- ImageView for the instrument image -->
+    <ImageView
+        android:id="@+id/instrumentImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="Instrument Image" />
+
+    <!-- TextView for the instrument name as header -->
+    <TextView
+        android:id="@+id/instrumentName"
+        style="@style/HeadingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instrument Name"
+        android:paddingTop="16dp"/>
+
+    <!-- TextView for the instrument's details -->
+    <TextView
+        android:id="@+id/instrumentPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="18sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/instrumentCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="18sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/instrumentBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brand"
+        android:textSize="18sp"
+        android:paddingTop="8dp" />
+
+    <!-- RatingBar with adjust on star feedback, step-sizing 0.5 -->
+    <RatingBar
+        android:id="@+id/rateBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:rating="4.5" />
+
+    <!-- Next, Borrow and Filter buttons-->
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/borrowButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrow"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/filterButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

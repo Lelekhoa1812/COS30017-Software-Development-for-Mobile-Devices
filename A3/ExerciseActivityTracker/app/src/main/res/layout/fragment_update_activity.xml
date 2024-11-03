@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UpdateActivityFragment">
+
+    <!-- Activity Time -->
+    <TextView
+        android:id="@+id/activityTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Time"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="5dp"/>
+    <!-- Set of input form -->
+    <LinearLayout
+        android:id="@+id/activityTimeInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/activityTimeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp">
+        <EditText
+            android:id="@+id/dayInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="dd"
+            android:inputType="number"
+            android:maxLength="2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/" />
+        <EditText
+            android:id="@+id/monthInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="mm"
+            android:inputType="number"
+            android:maxLength="2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/" />
+        <EditText
+            android:id="@+id/yearInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="yyyy"
+            android:layout_marginRight="40dp"
+            android:inputType="number"
+            android:maxLength="4" />
+        <EditText
+            android:id="@+id/hourInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="HH"
+            android:inputType="number"
+            android:maxLength="2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":" />
+        <EditText
+            android:id="@+id/minuteInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="MM"
+            android:inputType="number"
+            android:maxLength="2" />
+    </LinearLayout>
+
+    <!-- Activity Name -->
+    <TextView
+        android:id="@+id/activityNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Name"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/activityTimeInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="5dp" />
+    <EditText
+        android:id="@+id/activityNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Your activity's name"
+        app:layout_constraintTop_toBottomOf="@id/activityNameText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp" />
+    <!-- Character Count Text -->
+    <TextView
+        android:id="@+id/wordCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/20"
+        android:textColor="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/activityNameInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="5dp" />
+
+    <!-- Duration -->
+    <TextView
+        android:id="@+id/durationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/wordCountTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="5dp"/>
+    <EditText
+        android:id="@+id/durationInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Your activity's duration, in hours"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/durationText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/durationInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp" />
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/durationInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.ExerciseActivityTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary branding color -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_variant_color</item>
+        <item name="colorOnPrimary">@color/on_primary_color</item>
+
+        <!-- Secondary branding color -->
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant_color</item>
+        <item name="colorOnSecondary">@color/on_secondary_color</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_color</item>
+
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/background_color</item>
+
+        <!-- Enable edge-to-edge mode -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- AppBar Overlay for Light/Dark modes -->
+    <style name="Theme.ExerciseActivityTracker.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/primary_variant_color</item>
+    </style>
+
+    <!-- Popup Overlay -->
+    <style name="Theme.ExerciseActivityTracker.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

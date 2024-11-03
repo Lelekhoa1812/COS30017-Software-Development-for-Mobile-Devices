@@ -1,0 +1,67 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- ImageView for the instrument image -->
+    <ImageView
+        android:id="@+id/instrumentImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="Instrument Image" />
+
+    <TextView
+        style="@style/HeadingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrow Confirmation"
+        android:paddingTop="16dp"/>
+
+    <!-- RatingBar with adjust on star feedback, step-sizing 0.5 -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:rating="4.5" />
+
+    <!-- TextView for the booking details -->
+    <TextView
+        android:id="@+id/bookingDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Details"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <!-- Set Borrow Period button -->
+    <Button
+        android:id="@+id/setBorrowPeriodButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Borrow Period"
+        android:layout_marginTop="16dp" />
+
+    <!-- Confirm Booking and Cancel buttons -->
+    <Button
+        android:id="@+id/confirmButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Booking"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

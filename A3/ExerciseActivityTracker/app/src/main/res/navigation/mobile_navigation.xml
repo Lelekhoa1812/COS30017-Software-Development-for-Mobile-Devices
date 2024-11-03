@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/yourActivityFragment"> <!-- start destination -->
+
+    <fragment
+        android:id="@+id/yourActivityFragment"
+        android:name="com.example.exerciseactivitytracker.fragments.YourActivityFragment"
+        android:label="Your Activity"
+        tools:layout="@layout/fragment_your_activity">
+
+        <action
+            android:id="@+id/action_yourActivityFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+
+        <action
+            android:id="@+id/action_yourActivityFragment_to_updateActivityFragment"
+            app:destination="@id/updateActivityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addActivityFragment"
+        android:name="com.example.exerciseactivitytracker.fragments.AddActivityFragment"
+        android:label="Add Activity"
+        tools:layout="@layout/fragment_add_activity">
+
+        <action
+            android:id="@+id/action_addActivityFragment_to_yourActivityFragment"
+            app:destination="@id/yourActivityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateActivityFragment"
+        android:name="com.example.exerciseactivitytracker.fragments.UpdateActivityFragment"
+        android:label="Update Activity"
+        tools:layout="@layout/fragment_update_activity">
+
+        <argument
+            android:name="exerciseId"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_updateActivityFragment_to_yourActivityFragment"
+            app:destination="@id/yourActivityFragment" />
+    </fragment>
+
+</navigation>

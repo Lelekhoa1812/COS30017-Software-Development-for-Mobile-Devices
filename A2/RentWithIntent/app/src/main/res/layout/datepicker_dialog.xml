@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:text="Set Your Rent Period"
+        style="@style/HeadingStyle"
+        android:textStyle="bold" />
+
+    <!-- Initial plan was to set both the start and end date, then changed to only contain the end date -->
+    <!-- ScrollView wraps DatePicker to handle its size dynamically -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- End Date Picker -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Select End Date for Your Rental Period"
+                style="@style/SubHeadingStyle"
+                android:textStyle="italic" />
+            <DatePicker
+                android:id="@+id/endDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="90dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Confirm button -->
+    <Button
+    android:id="@+id/confirmTimeframeButton"
+    style="@style/ButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:text="Confirm Timeframe" />
+</LinearLayout>

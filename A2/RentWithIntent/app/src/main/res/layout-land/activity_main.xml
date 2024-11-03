@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape layout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Linear layout orientation splitting the layout to 2 side horizontally -->
+    <LinearLayout
+        android:id="@+id/contentBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+        <!-- Block Left -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+                <!-- ImageView for the instrument image -->
+                <ImageView
+                    android:id="@+id/instrumentImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Instrument Image" />
+                <!-- TextView for the instrument name as header -->
+                <TextView
+                    android:id="@+id/instrumentName"
+                    style="@style/HeadingStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrument Name"
+                    android:paddingTop="16dp"/>
+                <!-- RatingBar with adjust on star feedback, step-sizing 0.5 -->
+                <RatingBar
+                    android:id="@+id/rateBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="4.5" />
+        </LinearLayout>
+        <!-- Block Right -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingStart="4dp">
+            <!-- TextView for the instrument's details -->
+            <TextView
+                android:id="@+id/instrumentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textSize="18sp"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/instrumentName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/instrumentCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="18sp"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/instrumentPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/instrumentBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand"
+                android:textSize="18sp"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/instrumentCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <!-- Next, Borrow and Filter buttons-->
+            <Button
+                android:id="@+id/nextButton"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/contentBlock"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <Button
+                android:id="@+id/borrowButton"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Borrow"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/nextButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <Button
+                android:id="@+id/filterButton"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/borrowButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
